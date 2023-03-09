@@ -11,7 +11,7 @@ SimpleWorkflows = "6a97d125-85da-4b66-b300-4bba10360563"
 
 [compat]
 GraphRecipes = "0.5"
-RecipesBase = "1"
+RecipesBase = "0.6, 0.7, 0.8, 1"
 EasyJobsBase = "0.3, 0.4"
 SimpleWorkflows = "0.16, 0.23"
 julia = "1"
