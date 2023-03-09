@@ -1,7 +1,27 @@
 module SimpleWorkflowRecipes
 
+using EasyJobsBase:
+    JobStatus, PENDING, RUNNING, SUCCEEDED, FAILED, INTERRUPTED, TIMED_OUT, getstatus
 using GraphRecipes: GraphPlot, get_source_destiny_weight, get_adjacency_list
 using RecipesBase: @userplot, @recipe
+
+function getcolor(status::JobStatus)
+    if status == PENDING
+        :deepskyblue
+    elseif status == RUNNING
+        :gold
+    elseif status == SUCCEEDED
+        :chartreuse3
+    elseif status == FAILED
+        :red3
+    elseif status == INTERRUPTED
+        :hotpink
+    elseif status == TIMED_OUT
+        :chocolate
+    else
+        error("this should never happen!")
+    end
+end
 
 @userplot WorkflowPlot
 @recipe function f(plot::WorkflowPlot)
