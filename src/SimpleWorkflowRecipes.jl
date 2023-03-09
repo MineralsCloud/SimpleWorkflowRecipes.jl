@@ -30,6 +30,7 @@ end
     root := :bottom
     nodeshape --> :ellipse
     nodesize --> 0.2
+    nodecolor --> map(getcolor ∘ getstatus, workflow.jobs)
     names --> map(job -> getfield(job, :name), workflow.jobs)
     fontsize --> 9
     method --> :spring
