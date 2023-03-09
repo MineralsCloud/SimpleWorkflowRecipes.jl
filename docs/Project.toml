@@ -1,0 +1,3 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+SimpleWorkflowRecipes = "8a651d91-a9bf-46a9-bd79-85d5b70f63c4"
