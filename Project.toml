@@ -11,6 +11,7 @@ SimpleWorkflows = "6a97d125-85da-4b66-b300-4bba10360563"
 
 [compat]
 EasyJobsBase = "0.4"
+SimpleWorkflows = "0.23"
 julia = "1"
 
 [extras]
