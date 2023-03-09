@@ -19,7 +19,7 @@ function getcolor(status::JobStatus)
     elseif status == TIMED_OUT
         :chocolate
     else
-        error("this should never happen!")
+        throw(ArgumentError("unknown job status `$status`!"))
     end
 end
 
