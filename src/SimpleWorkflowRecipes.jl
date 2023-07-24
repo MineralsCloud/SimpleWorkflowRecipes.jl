@@ -22,8 +22,8 @@ end
 @userplot WorkflowPlot
 @recipe function f(plot::WorkflowPlot)
     workflow = plot.args[end]
-    curvature_scalar --> 0.01
     root := :bottom
+    curves --> false
     nodeshape --> :ellipse
     nodesize --> 0.2
     nodecolor --> map(getcolor ∘ getstatus, eachjob(workflow))
