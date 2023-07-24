@@ -3,7 +3,7 @@ module SimpleWorkflowRecipes
 using EasyJobsBase: JobStatus, PENDING, RUNNING, SUCCEEDED, FAILED, getstatus
 using GraphRecipes: GraphPlot, get_source_destiny_weight, get_adjacency_list
 using RecipesBase: @userplot, @recipe
-using SimpleWorkflows: eachjob
+using SimpleWorkflows: eachjob, findjob
 
 function getcolor(status::JobStatus)
     if status == PENDING
@@ -27,7 +27,7 @@ end
     nodeshape --> :ellipse
     nodesize --> 0.2
     nodecolor --> map(getcolor ∘ getstatus, eachjob(workflow))
-    names --> map(job -> getfield(job, :name), eachjob(workflow))
+    names --> map(Base.Fix2(findjob, workflow), eachjob(workflow))
     fontsize --> 9
     method --> :spring
     return GraphPlot(get_source_destiny_weight(get_adjacency_list(workflow.graph)))
