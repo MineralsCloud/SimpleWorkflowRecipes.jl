@@ -332,9 +332,9 @@ uuid = "05823500-19ac-5b8b-9628-191a04bc5112"
 version = "0.8.1+0"
 
 [[deps.OrderedCollections]]
-git-tree-sha1 = "1791b503101162477bf11e951caf6983e57cd8c2"
+git-tree-sha1 = "2e73fe17cac3c62ad1aebe70d44c963c3cfdc3e3"
 uuid = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
-version = "1.6.1"
+version = "1.6.2"
 
 [[deps.Parsers]]
 deps = ["Dates", "PrecompileTools", "UUIDs"]
@@ -423,7 +423,7 @@ version = "0.9.4"
 
 [[deps.SimpleWorkflowRecipes]]
 deps = ["EasyJobsBase", "GraphRecipes", "RecipesBase", "SimpleWorkflows"]
-git-tree-sha1 = "ca607e1c9aad17ad1ac63608c29952f2b8ca9e99"
+git-tree-sha1 = "8bb8f197b60872086e3624da46f678c7b85b0dab"
 repo-rev = "main"
 repo-url = "https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl"
 uuid = "8a651d91-a9bf-46a9-bd79-85d5b70f63c4"
