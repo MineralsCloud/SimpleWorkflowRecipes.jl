@@ -1,9 +1,11 @@
 module SimpleWorkflowRecipes
 
 using EasyJobsBase: JobStatus, PENDING, RUNNING, SUCCEEDED, FAILED, getstatus
+using Graphs: edges
 using GraphRecipes: GraphPlot, get_source_destiny_weight, get_adjacency_list
-using RecipesBase: @userplot, @recipe
-using SimpleWorkflows: eachjob, findjob
+using LayeredLayouts: Zarate, solve_positions
+using RecipesBase: @userplot, @recipe, @series
+using SimpleWorkflows: Workflow, indexin
 
 function getcolor(status::JobStatus)
     if status == PENDING
@@ -31,6 +33,32 @@ end
     fontsize --> 9
     method --> :spring
     return GraphPlot(get_source_destiny_weight(get_adjacency_list(workflow.graph)))
+end
+
+@recipe function f(::Type{<:Workflow}, workflow::Workflow)
+    framestyle --> :none
+    grid --> false
+    legend --> false
+    label --> ""
+    guide --> ""
+    nodes_x, nodes_y, paths = solve_positions(Zarate(), workflow.graph)
+    for edge in edges(workflow.graph)
+        edge_x, edge_y = paths[edge]
+        @series begin
+            seriestype --> :path
+            linewidth --> 2
+            edge_x, edge_y
+        end
+    end
+    for (job, (x, y)) in zip(workflow, zip(nodes_x, nodes_y))
+        @series begin
+            seriestype --> :scatter
+            markershape --> :circle
+            markersize --> 10
+            color --> getcolor(getstatus(job))
+            Base.vect(x), Base.vect(y)
+        end
+    end
 end
 
 end
