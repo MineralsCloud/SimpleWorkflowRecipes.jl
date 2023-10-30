@@ -23,8 +23,24 @@ end
 
 @userplot WorkflowPlot
 @recipe function f(
-    plot::WorkflowPlot; edgewidth=2, edgestrokecolor=:black, nodeshape=:circle, nodesize=5
+    plot::WorkflowPlot;
+    edgewidth=1,
+    edgestrokecolor=:black,
+    nodeshape=:circle,
+    nodesize=5,
+    root=:left,
 )
+    if root == :right
+        # FIXME
+    elseif root == :bottom
+        permute --> (:x, :y)
+    elseif root == :top
+        # FIXME
+    elseif root == :left
+        # do nothing
+    else
+        throw(ArgumentError("unknown root `$root`!"))
+    end
     workflow = only(plot.args)
     framestyle --> :none
     grid --> false
@@ -36,6 +52,7 @@ end
         edge_x, edge_y = paths[edge]
         @series begin
             seriestype --> :path
+            arrow --> true
             linewidth --> edgewidth
             linecolor --> edgestrokecolor
             edge_x, edge_y
@@ -48,6 +65,7 @@ end
             markersize --> nodesize
             markerstrokewidth --> 0
             seriescolor --> getcolor(getstatus(job))
+            series_annotations --> string(only(indexin(job, workflow)))
             Base.vect(x), Base.vect(y)
         end
     end
