@@ -21,9 +21,9 @@ function getcolor(status::JobStatus)
     end
 end
 
-@userplot WorkflowPlot2
+@userplot WorkflowPlot
 @recipe function f(
-    plot::WorkflowPlot2; edgewidth=2, edgestrokecolor=:black, nodeshape=:circle, nodesize=5
+    plot::WorkflowPlot; edgewidth=2, edgestrokecolor=:black, nodeshape=:circle, nodesize=5
 )
     workflow = only(plot.args)
     framestyle --> :none
