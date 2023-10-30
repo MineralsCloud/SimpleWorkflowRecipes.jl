@@ -28,8 +28,8 @@ end
     curves --> false
     nodeshape --> :ellipse
     nodesize --> 0.2
-    nodecolor --> map(getcolor ∘ getstatus, eachjob(workflow))
-    names --> map(Base.Fix2(findjob, workflow), eachjob(workflow))
+    nodecolor --> map(getcolor ∘ getstatus, collect(workflow))
+    names --> indexin(collect(workflow), workflow)
     fontsize --> 9
     method --> :spring
     return GraphPlot(get_source_destiny_weight(get_adjacency_list(workflow.graph)))
