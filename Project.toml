@@ -1,7 +1,7 @@
 name = "SimpleWorkflowRecipes"
 uuid = "8a651d91-a9bf-46a9-bd79-85d5b70f63c4"
 authors = ["singularitti <singularitti@outlook.com> and contributors"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 EasyJobsBase = "db8ca866-b61f-4bd1-a9b9-75c107d645d4"
