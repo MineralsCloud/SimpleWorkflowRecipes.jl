@@ -21,20 +21,6 @@ function getcolor(status::JobStatus)
     end
 end
 
-@userplot WorkflowPlot
-@recipe function f(plot::WorkflowPlot)
-    workflow = plot.args[end]
-    root := :bottom
-    curves --> false
-    nodeshape --> :ellipse
-    nodesize --> 0.2
-    nodecolor --> map(getcolor ∘ getstatus, collect(workflow))
-    names --> indexin(collect(workflow), workflow)
-    fontsize --> 9
-    method --> :spring
-    return GraphPlot(get_source_destiny_weight(get_adjacency_list(workflow.graph)))
-end
-
 @userplot WorkflowPlot2
 @recipe function f(
     plot::WorkflowPlot2; edgewidth=2, edgestrokecolor=:black, nodeshape=:circle, nodesize=5
