@@ -35,7 +35,11 @@ end
     return GraphPlot(get_source_destiny_weight(get_adjacency_list(workflow.graph)))
 end
 
-@recipe function f(::Type{<:Workflow}, workflow::Workflow)
+@userplot WorkflowPlot2
+@recipe function f(
+    plot::WorkflowPlot2; edgewidth=2, edgestrokecolor=:black, nodeshape=:circle, nodesize=5
+)
+    workflow = only(plot.args)
     framestyle --> :none
     grid --> false
     legend --> false
@@ -46,16 +50,18 @@ end
         edge_x, edge_y = paths[edge]
         @series begin
             seriestype --> :path
-            linewidth --> 2
+            linewidth --> edgewidth
+            linecolor --> edgestrokecolor
             edge_x, edge_y
         end
     end
     for (job, (x, y)) in zip(workflow, zip(nodes_x, nodes_y))
         @series begin
             seriestype --> :scatter
-            markershape --> :circle
-            markersize --> 10
-            color --> getcolor(getstatus(job))
+            markershape --> nodeshape
+            markersize --> nodesize
+            markerstrokewidth --> 0
+            seriescolor --> getcolor(getstatus(job))
             Base.vect(x), Base.vect(y)
         end
     end
