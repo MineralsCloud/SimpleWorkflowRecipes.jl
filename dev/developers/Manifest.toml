@@ -407,7 +407,7 @@ version = "0.9.4"
 
 [[deps.SimpleWorkflowRecipes]]
 deps = ["EasyJobsBase", "Graphs", "LayeredLayouts", "RecipesBase", "SimpleWorkflows"]
-git-tree-sha1 = "e9a50bf067bc8410343f23d618245496ff034d85"
+git-tree-sha1 = "2e94adca3d368d6a45e7574b98d684d81ed5ee82"
 repo-rev = "main"
 repo-url = "https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl"
 uuid = "8a651d91-a9bf-46a9-bd79-85d5b70f63c4"
