@@ -2,7 +2,6 @@ module SimpleWorkflowRecipes
 
 using EasyJobsBase: JobStatus, PENDING, RUNNING, SUCCEEDED, FAILED, getstatus
 using Graphs: edges
-using GraphRecipes: GraphPlot, get_source_destiny_weight, get_adjacency_list
 using LayeredLayouts: Zarate, solve_positions
 using RecipesBase: @userplot, @recipe, @series
 using SimpleWorkflows: Workflow, indexin
