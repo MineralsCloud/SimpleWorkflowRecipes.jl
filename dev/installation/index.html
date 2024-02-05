@@ -7,87 +7,25 @@ julia&gt; Pkg.update()
 julia&gt; Pkg.add(&quot;SimpleWorkflowRecipes&quot;)</code></pre></li><li><p>Run</p><pre><code class="language-julia-repl hljs">julia&gt; using SimpleWorkflowRecipes</code></pre><p>and have fun!</p></li><li><p>While using, please keep this Julia session alive. Restarting might cost some time.</p></li></ol><p>If you want to install the latest in-development (probably buggy) version of SimpleWorkflowRecipes, type</p><pre><code class="language-julia-repl hljs" style="display:block;">julia&gt; using Pkg</code><code class="nohighlight hljs ansi" style="display:block;"></code><br/><code class="language-julia-repl hljs" style="display:block;">julia&gt; Pkg.update()</code><code class="nohighlight hljs ansi" style="display:block;"><span class="sgr32"><span class="sgr1">    Updating</span></span> registry at `~/.julia/registries/General.toml`
 <span class="sgr32"><span class="sgr1">  No Changes</span></span> to `~/work/SimpleWorkflowRecipes.jl/SimpleWorkflowRecipes.jl/docs/build/developers/Project.toml`
 <span class="sgr32"><span class="sgr1">  No Changes</span></span> to `~/work/SimpleWorkflowRecipes.jl/SimpleWorkflowRecipes.jl/docs/build/developers/Manifest.toml`</code><br/><code class="language-julia-repl hljs" style="display:block;">julia&gt; pkg&quot;add https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl&quot;</code><code class="nohighlight hljs ansi" style="display:block;"><span class="sgr33"><span class="sgr1">┌ Warning: </span></span>The Pkg REPL mode is intended for interactive use only, and should not be used from scripts. It is recommended to use the functional API instead.
-<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ Pkg.REPLMode /opt/hostedtoolcache/julia/1.9.3/x64/share/julia/stdlib/v1.9/Pkg/src/REPLMode/REPLMode.jl:382</span>
+<span class="sgr33"><span class="sgr1">└ </span></span><span class="sgr90">@ Pkg.REPLMode /opt/hostedtoolcache/julia/1.10.0/x64/share/julia/stdlib/v1.10/Pkg/src/REPLMode/REPLMode.jl:382</span>
 <span class="sgr32"><span class="sgr1">     Cloning</span></span> git-repo `https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl`
 <span class="sgr32"><span class="sgr1">    Updating</span></span> git-repo `https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl`
 <span class="sgr32"><span class="sgr1">   Resolving</span></span> package versions...
 <span class="sgr32"><span class="sgr1">    Updating</span></span> `~/work/SimpleWorkflowRecipes.jl/SimpleWorkflowRecipes.jl/docs/build/developers/Project.toml`
-  <span class="sgr90">[8a651d91] </span><span class="sgr93">~ SimpleWorkflowRecipes v0.1.0 ⇒ v0.2.0 `https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl#main`</span>
+  <span class="sgr90">[8a651d91] </span><span class="sgr93">~ SimpleWorkflowRecipes v0.2.0 ⇒ v0.2.0 `https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl#main`</span>
 <span class="sgr32"><span class="sgr1">    Updating</span></span> `~/work/SimpleWorkflowRecipes.jl/SimpleWorkflowRecipes.jl/docs/build/developers/Manifest.toml`
-  <span class="sgr90">[1520ce14] </span><span class="sgr91">- AbstractTrees v0.4.4</span>
-  <span class="sgr90">[79e6a3ab] </span><span class="sgr91">- Adapt v3.7.1</span>
-  <span class="sgr90">[13072b0f] </span><span class="sgr91">- AxisAlgorithms v1.0.1</span>
-  <span class="sgr90">[6e4b80f9] </span><span class="sgr92">+ BenchmarkTools v1.3.2</span>
-<span class="sgr33">⌅</span> <span class="sgr90">[fa961155] </span><span class="sgr92">+ CEnum v0.4.2</span>
-  <span class="sgr90">[d360d2e6] </span><span class="sgr91">- ChainRulesCore v1.18.0</span>
-  <span class="sgr90">[523fee87] </span><span class="sgr92">+ CodecBzip2 v0.8.1</span>
-  <span class="sgr90">[944b1d66] </span><span class="sgr92">+ CodecZlib v0.7.3</span>
-  <span class="sgr90">[35d6a980] </span><span class="sgr91">- ColorSchemes v3.24.0</span>
-  <span class="sgr90">[3da002f7] </span><span class="sgr91">- ColorTypes v0.11.4</span>
-  <span class="sgr90">[c3611d14] </span><span class="sgr91">- ColorVectorSpace v0.10.0</span>
-  <span class="sgr90">[5ae59095] </span><span class="sgr91">- Colors v0.12.10</span>
-  <span class="sgr90">[bbf7d656] </span><span class="sgr92">+ CommonSubexpressions v0.3.0</span>
-  <span class="sgr90">[187b0558] </span><span class="sgr91">- ConstructionBase v1.5.4</span>
-  <span class="sgr90">[9a962f9c] </span><span class="sgr91">- DataAPI v1.15.0</span>
-  <span class="sgr90">[e2d170a0] </span><span class="sgr91">- DataValueInterfaces v1.0.0</span>
-  <span class="sgr90">[163ba53b] </span><span class="sgr92">+ DiffResults v1.1.0</span>
-  <span class="sgr90">[b552c78f] </span><span class="sgr92">+ DiffRules v1.15.1</span>
-  <span class="sgr90">[ffbed154] </span><span class="sgr92">+ DocStringExtensions v0.9.3</span>
-  <span class="sgr90">[e2685f51] </span><span class="sgr92">+ ECOS v1.1.1</span>
-  <span class="sgr90">[db8ca866] </span><span class="sgr93">↑ EasyJobsBase v0.4.0 ⇒ v0.15.0</span>
-  <span class="sgr90">[411431e0] </span><span class="sgr91">- Extents v0.1.2</span>
-  <span class="sgr90">[53c48c17] </span><span class="sgr91">- FixedPointNumbers v0.8.4</span>
-  <span class="sgr90">[f6369f11] </span><span class="sgr92">+ ForwardDiff v0.10.36</span>
-  <span class="sgr90">[46192b85] </span><span class="sgr91">- GPUArraysCore v0.1.5</span>
-  <span class="sgr90">[cf35fbd7] </span><span class="sgr91">- GeoInterface v1.3.2</span>
-  <span class="sgr90">[5c1252a2] </span><span class="sgr91">- GeometryBasics v0.4.9</span>
-  <span class="sgr90">[4d00f742] </span><span class="sgr91">- GeometryTypes v0.8.5</span>
-  <span class="sgr90">[bd48cda9] </span><span class="sgr91">- GraphRecipes v0.5.12</span>
-  <span class="sgr90">[87dc4568] </span><span class="sgr92">+ HiGHS v1.7.5</span>
-  <span class="sgr90">[a98d9a8b] </span><span class="sgr91">- Interpolations v0.14.7</span>
-  <span class="sgr90">[92d709cd] </span><span class="sgr92">+ IrrationalConstants v0.2.2</span>
-  <span class="sgr90">[82899510] </span><span class="sgr91">- IteratorInterfaceExtensions v1.0.0</span>
-  <span class="sgr90">[4076af6c] </span><span class="sgr92">+ JuMP v1.16.0</span>
-  <span class="sgr90">[f4a74d36] </span><span class="sgr92">+ LayeredLayouts v0.2.9</span>
-  <span class="sgr90">[2ab3a3ac] </span><span class="sgr92">+ LogExpFunctions v0.3.26</span>
-  <span class="sgr90">[b8f27783] </span><span class="sgr92">+ MathOptInterface v1.21.0</span>
-  <span class="sgr90">[d8a4904e] </span><span class="sgr92">+ MutableArithmetics v1.3.3</span>
-  <span class="sgr90">[46757867] </span><span class="sgr91">- NetworkLayout v0.4.6</span>
-  <span class="sgr90">[6fe1bfb0] </span><span class="sgr91">- OffsetArrays v1.12.10</span>
-  <span class="sgr90">[995b91a9] </span><span class="sgr91">- PlotUtils v1.3.5</span>
-  <span class="sgr90">[c84ed2f1] </span><span class="sgr91">- Ratios v0.4.5</span>
-  <span class="sgr90">[189a3867] </span><span class="sgr91">- Reexport v1.2.2</span>
-  <span class="sgr90">[ae029012] </span><span class="sgr91">- Requires v1.3.0</span>
-  <span class="sgr90">[8a651d91] </span><span class="sgr93">~ SimpleWorkflowRecipes v0.1.0 ⇒ v0.2.0 `https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl#main`</span>
-  <span class="sgr90">[6a97d125] </span><span class="sgr93">↑ SimpleWorkflows v0.23.0 ⇒ v0.29.0</span>
-  <span class="sgr90">[66db9d55] </span><span class="sgr92">+ SnoopPrecompile v1.0.3</span>
-  <span class="sgr90">[276daf66] </span><span class="sgr92">+ SpecialFunctions v2.3.1</span>
-  <span class="sgr90">[09ab397b] </span><span class="sgr91">- StructArrays v0.6.16</span>
-  <span class="sgr90">[3783bdb8] </span><span class="sgr91">- TableTraits v1.0.1</span>
-  <span class="sgr90">[bd369af6] </span><span class="sgr91">- Tables v1.11.1</span>
-  <span class="sgr90">[62fd8b95] </span><span class="sgr91">- TensorCore v0.1.1</span>
-  <span class="sgr90">[6d80a3f9] </span><span class="sgr92">+ Thinkers v0.4.1</span>
-  <span class="sgr90">[3bb67fe8] </span><span class="sgr92">+ TranscodingStreams v0.10.1</span>
-  <span class="sgr90">[efce3f68] </span><span class="sgr91">- WoodburyMatrices v0.5.5</span>
-  <span class="sgr90">[6e34b625] </span><span class="sgr92">+ Bzip2_jll v1.0.8+0</span>
-  <span class="sgr90">[c2c64177] </span><span class="sgr92">+ ECOS_jll v200.0.800+0</span>
-  <span class="sgr90">[5ae413db] </span><span class="sgr91">- EarCut_jll v2.2.4+0</span>
-  <span class="sgr90">[8fd58aa0] </span><span class="sgr92">+ HiGHS_jll v1.6.0+0</span>
-  <span class="sgr90">[efe28fd5] </span><span class="sgr92">+ OpenSpecFun_jll v0.5.5+0</span>
-  <span class="sgr90">[9abbd945] </span><span class="sgr92">+ Profile</span>
-  <span class="sgr90">[8dfed614] </span><span class="sgr92">+ Test</span>
-<span class="sgr36"><span class="sgr1">        Info</span></span> Packages marked with <span class="sgr33">⌅</span> have new versions available but compatibility constraints restrict them from upgrading. To see why use `status --outdated -m`
+  <span class="sgr90">[8a651d91] </span><span class="sgr93">~ SimpleWorkflowRecipes v0.2.0 ⇒ v0.2.0 `https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl#main`</span>
 <span class="sgr32"><span class="sgr1">Precompiling</span></span> project...
 <span class="sgr33">  ✓ </span>SimpleWorkflowRecipes
-  1 dependency successfully precompiled in 7 seconds. 63 already precompiled.
+  1 dependency successfully precompiled in 3 seconds. 65 already precompiled.
   <span class="sgr33">1</span> dependency precompiled but a different version is currently loaded. Restart julia to access the new version</code></pre><p>in the second step above.</p><h2 id="Update-SimpleWorkflowRecipes"><a class="docs-heading-anchor" href="#Update-SimpleWorkflowRecipes">Update SimpleWorkflowRecipes</a><a id="Update-SimpleWorkflowRecipes-1"></a><a class="docs-heading-anchor-permalink" href="#Update-SimpleWorkflowRecipes" title="Permalink"></a></h2><p>Please <a href="https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository">watch</a> our <a href="https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl">GitHub repository</a> for new releases. Once we release a new version, you can update SimpleWorkflowRecipes by typing</p><pre><code class="language-julia-repl hljs" style="display:block;">julia&gt; using Pkg</code><code class="nohighlight hljs ansi" style="display:block;"></code><br/><code class="language-julia-repl hljs" style="display:block;">julia&gt; Pkg.update(&quot;SimpleWorkflowRecipes&quot;)</code><code class="nohighlight hljs ansi" style="display:block;"><span class="sgr32"><span class="sgr1">    Updating</span></span> registry at `~/.julia/registries/General.toml`
 <span class="sgr32"><span class="sgr1">    Updating</span></span> git-repo `https://github.com/MineralsCloud/SimpleWorkflowRecipes.jl`
 <span class="sgr32"><span class="sgr1">  No Changes</span></span> to `~/work/SimpleWorkflowRecipes.jl/SimpleWorkflowRecipes.jl/docs/build/developers/Project.toml`
 <span class="sgr32"><span class="sgr1">  No Changes</span></span> to `~/work/SimpleWorkflowRecipes.jl/SimpleWorkflowRecipes.jl/docs/build/developers/Manifest.toml`</code><br/><code class="language-julia-repl hljs" style="display:block;">julia&gt; Pkg.gc()</code><code class="nohighlight hljs ansi" style="display:block;"><span class="sgr32"><span class="sgr1">      Active</span></span> manifest files: 4 found
-<span class="sgr32"><span class="sgr1">      Active</span></span> artifact files: 5 found
+<span class="sgr32"><span class="sgr1">      Active</span></span> artifact files: 8 found
 <span class="sgr32"><span class="sgr1">      Active</span></span> scratchspaces: 0 found
 <span class="sgr32"><span class="sgr1">     Deleted</span></span> no artifacts, repos, packages or scratchspaces</code></pre><p>in the Julia REPL.</p><h2 id="Uninstall-and-reinstall-SimpleWorkflowRecipes"><a class="docs-heading-anchor" href="#Uninstall-and-reinstall-SimpleWorkflowRecipes">Uninstall and reinstall SimpleWorkflowRecipes</a><a id="Uninstall-and-reinstall-SimpleWorkflowRecipes-1"></a><a class="docs-heading-anchor-permalink" href="#Uninstall-and-reinstall-SimpleWorkflowRecipes" title="Permalink"></a></h2><p>Sometimes errors may occur if the package is not properly installed. In this case, you may want to uninstall and reinstall the package. Here is how to do that:</p><ol><li><p>To uninstall, in a Julia session, run</p><pre><code class="language-julia-repl hljs">julia&gt; using Pkg
 
 julia&gt; Pkg.rm(&quot;SimpleWorkflowRecipes&quot;)
 
-julia&gt; Pkg.gc()</code></pre></li><li><p>Press <code>ctrl+d</code> to quit the current session. Start a new Julia session and reinstall SimpleWorkflowRecipes.</p></li></ol></article><nav class="docs-footer"><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="auto">Automatic (OS)</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.1.2 on <span class="colophon-date" title="Monday 30 October 2023 08:06">Monday 30 October 2023</span>. Using Julia version 1.9.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+julia&gt; Pkg.gc()</code></pre></li><li><p>Press <code>ctrl+d</code> to quit the current session. Start a new Julia session and reinstall SimpleWorkflowRecipes.</p></li></ol></article><nav class="docs-footer"><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="auto">Automatic (OS)</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.2.1 on <span class="colophon-date" title="Monday 5 February 2024 23:41">Monday 5 February 2024</span>. Using Julia version 1.10.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
